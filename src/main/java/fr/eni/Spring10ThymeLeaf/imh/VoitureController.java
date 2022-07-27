@@ -30,17 +30,6 @@ private VoitureDao voitureDao;
 	
 	@GetMapping("/list")
 	public String list(Model model) {
-//		ArrayList<Voiture> liste = new ArrayList<>();
-//		liste.add(new Voiture("ABC-123-DEF", "Renault", "Captur")); 
-//		liste.add(new Voiture("GHI-123-JKL", "Renault", "Zoe")); 
-//		liste.add(new Voiture("MNO-123-PQR", "Tesla", "Model3")); 
-		Voiture captur = (new Voiture("ABC-123-DEF", "Renault", "Captur")); 
-		Voiture zoe = (new Voiture("GHI-123-JKL", "Renault", "Zoe")); 
-		Voiture model3 = (new Voiture("MNO-123-PQR", "Tesla", "Model3")); 
-	
-		voitureDao.save(captur);
-		voitureDao.save(zoe);
-		voitureDao.save(model3);
 		ArrayList<Voiture> listeVoiture = (ArrayList<Voiture>) voitureDao.findAll();
 
 		model.addAttribute("listeVoiture", listeVoiture);
