@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
 
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="UTF-8">
 	<!-- CSS only -->
@@ -15,7 +15,7 @@
 
 	<form th:action="@{/ihm/voiture/form}" th:object="${voiture}" method="post">
 		<label for="immatriculation">Immatriculation</label>
-		<input type="text" th:field="*{immatriculation}" id="immatriculation" />
+		<input type="text" th:field="*{immatriculation}" id="immatriculation"/>
 		<span th:if="${#fields.hasErrors('immatriculation')}" th:errors="*{immatriculation}" />
 
 
